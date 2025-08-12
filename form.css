@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg,rgb(0, 255, 98),rgb(0, 229, 255)
+    ,rgb(0, 229, 255),rgb(0, 255, 98)
+    );
+    background-size:400% 400% ;
+    animation: gradient 12s linear infinite;
+    
+}
+.form{
+border-radius: 25px;
+  /* background: linear-gradient(70deg,rgb(16, 143, 255),rgb(0, 181, 252),rgb(0, 181, 252),rgb(0, 167, 239)); */
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  height: max-content;
+  background-size: 400% 400% ;
+  
+  /* animation: form 5s linear infinite,gradient 12s linear infinite; */
+   
+}
+
+@keyframes form{
+    0% {
+        box-shadow: 0px 0px 25px #0404fc;
+    }
+    50%{
+        box-shadow: 0px 0px 25px #3330fc;
+    }
+    100%{
+        box-shadow: 0px 0px 25px #0408fc;
+    }
+}
+small{
+    color: white;
+}
+*{
+    font-family: serif;
+}
+textarea{
+    width: 350px;
+    border-radius: 5px;
+    height: 50px;
+}
+select{
+    width: 200px;
+    border: 2px  black;
+    border-style: outset;
+    border-radius: 5px ;
+    height: 25px ;
+    transition: .5s;
+
+}
+.text{
+    position: relative;
+    margin:25px 0;
+    width :250px;
+}
+.text input{
+    width: 100%;
+    padding: 2px 2px;
+    font-size: 16px;
+    border: 2px solid #00bfa6;
+    border-radius: 8px;
+}
+
+.text label{
+    position: absolute;
+    left:10px;
+    top:6px;
+    padding : 0px 2px;
+    
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.text input:focus+label,.text input:not(:placeholder-shown)+label{
+    top:-8px;
+    left: 8px;
+    font-size: 12px;
+    color: rgb(19, 11, 0);
+    text-shadow: 0 0 3px white;
+    
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    
+    
+    100%{
+        background-position: 100% 50%;
+    }
+}
+input[type = "text"]{
+    width: 350px;
+    border-radius: 5px;
+    height:25px;
+    
+}
+.radio,.check{
+    cursor: pointer;
+    
+    transition: 0.5s;
+    
+}
+.radio:hover,.check:hover{
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0),0px 0px 10px rgb(0, 0, 0);
+}
+input[type = "radio"]
+{
+    display: none;
+}
+input[type = "radio"]:checked+span,input[type = "checkbox"]:checked+span{
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0),0px 0px 10px rgb(0, 0, 0);
+    
+}
+input[type = "checkbox"]{
+    accent-color: rgb(255, 234, 0);
+}
+input[type = "text"]:focus,textarea:focus,select:focus{
+    outline: none;
+    box-shadow: 0 0 5px #0404fc;
+    transition: .2s;
+    
+}
+textarea{
+    resize: none;
+}
+
